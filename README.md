@@ -1,3 +1,44 @@
+WT13
+| **Sensor Name**                               | **Unit** | **Location**        |
+|-----------------------------------------------|----------|---------------------|
+| Hub Speed                                     | rpm      | Hub                 |
+| Hub Angle                                     | °        | Hub                 |
+| Blade 1 Angle                                 | °        | Blade               |
+| Blade 2 Angle                                 | °        | Blade               |
+| Blade 3 Angle                                 | °        | Blade               |
+| Pitch Motor 1 Current                         | A        | Nacelle             |
+| Pitch Motor 2 Current                         | A        | Nacelle             |
+| Pitch Motor 3 Current                         | A        | Nacelle             |
+| Vibration Value in X Direction                | m/s²     | Nacelle             |
+| Vibration Value in Y Direction                | m/s²     | Nacelle             |
+| Hydraulic Brake Pressure                       | bar      | Nacelle             |
+| Wind Speed (Nacelle Weather Station)           | m/s      | Weather Station     |
+| Absolute Wind Direction                       | °        | Weather Station     |
+| Inverter Power on Generator Side              | kW       | Inverter            |
+| Generator Operating Frequency                 | Hz       | Generator           |
+| Generator Current                             | A        | Generator           |
+| Generator Torque                              | Nm       | Generator           |
+| Ambient Temperature (Meteorological Tower)    | °C       | Weather Station     |
+| Hub Temperature                               | °C       | Hub                 |
+| Pitch Motor 1 Power Estimation                | kW       | Nacelle             |
+| Pitch Motor 2 Power Estimation                | kW       | Nacelle             |
+| Pitch Motor 3 Power Estimation                | kW       | Nacelle             |
+| Current Turbine State Value                   | -        | Control             |
+| Blade 1 Battery Box Temperature               | °C       | Blade               |
+| Blade 2 Battery Box Temperature               | °C       | Blade               |
+| Blade 3 Battery Box Temperature               | °C       | Blade               |
+| Blade 1 Pitch Motor Temperature               | °C       | Blade               |
+| Blade 2 Pitch Motor Temperature               | °C       | Blade               |
+| Blade 3 Pitch Motor Temperature               | °C       | Blade               |
+| Blade 1 Inverter Box Temperature              | °C       | Blade               |
+| Blade 2 Inverter Box Temperature              | °C       | Blade               |
+| Blade 3 Inverter Box Temperature              | °C       | Blade               |
+| Current Variance (curr\_var)                  | A        | Electrical          |
+| Temperature Variance (temp\_var)              | °C       | Electrical          |
+
+
+# WT23
+
 | **Sensor Name**                               | **Unit** | **Location**        |
 |-----------------------------------------------|----------|---------------------|
 | Ambient Temperature Sensor                    | °C       | Weather Station     |
@@ -48,3 +89,6 @@
 | Total Reactive Power Sensor                   | VArh     | Generator           |
 | Rotor RPM Sensor                              | rpm      | Rotor               |
 | Nose Cone Temperature Sensor                  | °C       | Rotor               |
+
+
+
