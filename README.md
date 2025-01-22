@@ -1,4 +1,7 @@
 # WT13
+
+The WT13 dataset originates from a wind farm in the central-southern mountainous region of China, consisting of 25 units of 2MW squirrel-cage and direct-drive wind turbines. The dataset includes two turbines: one in normal operation and the other with a cracked main bearing, which are used to form the training and testing sets. The dataset comprises 34 variables that are used to analyze the performance differences between the turbines in normal operation and under fault conditions. By analyzing these variables, the WT13 dataset helps researchers gain deeper insights into the impact of main bearing cracks on wind turbine operation, offering significant practical value.
+
 | **Sensor Name**                               | **Unit** | **Location**        |
 |-----------------------------------------------|----------|---------------------|
 | Hub Speed                                     | rpm      | Hub                 |
@@ -38,6 +41,8 @@
 
 
 # WT23
+
+In this dataset, which was collected at 10-minute intervals with anonymized timestamps, we observed a typical case of bearing failure. The fault primarily manifested as abnormal bearing temperature rises, particularly at the Drive End and Non-Drive End bearings, where temperatures increased significantly by 60-90 degrees Celsius with notable periodic fluctuations. As the fault progressed, the generator's stator three-phase winding temperatures showed imbalances, with temperature rises of approximately 40 degrees. Simultaneously, significant operational abnormalities emerged: speed fluctuations reached 45\% of the base speed with sudden speed variations; three-phase currents displayed marked imbalances with fluctuations of up to 35\%; ultimately leading to a substantial decrease in unit power output, with maximum reductions reaching 60\%. These fault characteristics exhibited typical nonlinear development trends in the 10-minute resolution data, indicating that the bearing failure had begun to affect the overall operational status of the generating unit.
 
 | **Sensor Name**                               | **Unit** | **Location**        |
 |-----------------------------------------------|----------|---------------------|
