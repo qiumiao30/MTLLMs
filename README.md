@@ -44,56 +44,57 @@ The WTMB dataset originates from a wind farm in the central-southern mountainous
 
 In this dataset, which was collected at 10-minute intervals with anonymized timestamps, we observed a typical case of bearing failure. The fault primarily manifested as abnormal bearing temperature rises, particularly at the Drive End and Non-Drive End bearings, where temperatures increased significantly by 60-90 degrees Celsius with notable periodic fluctuations. As the fault progressed, the generator's stator three-phase winding temperatures showed imbalances, with temperature rises of approximately 40 degrees. Simultaneously, significant operational abnormalities emerged: speed fluctuations reached 45\% of the base speed with sudden speed variations; three-phase currents displayed marked imbalances with fluctuations of up to 35\%; ultimately leading to a substantial decrease in unit power output, with maximum reductions reaching 60\%. These fault characteristics exhibited typical nonlinear development trends in the 10-minute resolution data, indicating that the bearing failure had begun to affect the overall operational status of the generating unit.
 
-| **Sensor Name**                               | **Unit** | **Location**        |
-|-----------------------------------------------|----------|---------------------|
-| Ambient Temperature Sensor                    | °C       | Weather Station     |
-| Absolute Wind Direction Sensor                | °        | Weather Station     |
-| Relative Wind Direction Sensor                | °        | Weather Station     |
-| Wind Speed Sensor                             | m/s      | Weather Station     |
-| Estimated Wind Speed Sensor                   | m/s      | Weather Station     |
-| Pitch Angle Sensor                            | °        | Nacelle             |
-| Hub Controller Temperature Sensor             | °C       | Hub                 |
-| Top Nacelle Controller Temperature Sensor     | °C       | Nacelle             |
-| Choke Coils Temperature Sensor (VCS Section)  | °C       | Nacelle             |
-| VCP-Board Temperature Sensor                  | °C       | Nacelle             |
-| VCS Cooling Water Temperature Sensor          | °C       | Nacelle             |
-| Gearbox High-Speed Shaft Bearing Temperature Sensor | °C | Gearbox             |
-| Gearbox Oil Temperature Sensor                | °C       | Gearbox             |
-| Generator Drive-End Bearing Temperature Sensor | °C      | Generator           |
-| Generator Non-Drive-End Bearing Temperature Sensor | °C  | Generator           |
-| Stator Winding Phase 1 Temperature Sensor    | °C       | Generator           |
-| Stator Winding Phase 2 Temperature Sensor    | °C       | Generator           |
-| Stator Winding Phase 3 Temperature Sensor    | °C       | Generator           |
-| Generator RPM Sensor                          | rpm      | Generator           |
-| Split Ring Chamber Temperature Sensor         | °C       | Nacelle             |
-| Busbar Section Temperature Sensor             | °C       | Nacelle             |
-| Grid Side Inverter IGBT Temperature Sensor    | °C       | Inverter            |
-| Phase Displacement Sensor                     | °        | Electrical          |
-| Phase 1 Current Sensor                        | A        | Electrical          |
-| Phase 2 Current Sensor                        | A        | Electrical          |
-| Phase 3 Current Sensor                        | A        | Electrical          |
-| Phase 1 Voltage Sensor                        | V        | Electrical          |
-| Phase 2 Voltage Sensor                        | V        | Electrical          |
-| Phase 3 Voltage Sensor                        | V        | Electrical          |
-| Grid Frequency Sensor                         | Hz       | Grid                |
-| Grid Capacitive Reactive Power Sensor        | kVAr     | Grid                |
-| Grid Inductive Reactive Power Sensor         | kVAr     | Grid                |
-| Grid Active Power Sensor                     | kW       | Grid                |
-| Grid Power Sensor                             | kW       | Grid                |
-| Grid Reactive Power Sensor                   | kVAr     | Grid                |
-| Hydraulic Group Oil Temperature Sensor        | °C       | Hydraulic System    |
-| Nacelle Direction Sensor                      | °        | Nacelle             |
-| Nacelle Temperature Sensor                    | °C       | Nacelle             |
-| Active Power Sensor (Generator Disconnected)  | Wh       | Generator           |
-| Active Power Sensor (Delta Connection)        | Wh       | Generator           |
-| Active Power Sensor (Star Connection)         | Wh       | Generator           |
-| Reactive Power Sensor (Generator Disconnected)| VArh     | Generator           |
-| Reactive Power Sensor (Delta Connection)      | VArh     | Generator           |
-| Reactive Power Sensor (Star Connection)       | VArh     | Generator           |
-| Total Active Power Sensor                     | Wh       | Generator           |
-| Total Reactive Power Sensor                   | VArh     | Generator           |
-| Rotor RPM Sensor                              | rpm      | Rotor               |
-| Nose Cone Temperature Sensor                  | °C       | Rotor               |
+# Standardized Variable Names
+
+| Variable Name                         | Description                                      | Unit       | Location               |
+|----------------------------------------|--------------------------------------------------|------------|------------------------|
+| `ambient_temp`                         | Ambient temperature                              | °C         | Weather station       |
+| `wind_abs_dir`                         | Wind absolute direction                          | °          | Weather station       |
+| `wind_rel_dir`                         | Wind relative direction                          | °          | Weather station       |
+| `wind_speed`                           | Wind speed                                      | m/s        | Weather station       |
+| `est_wind_speed`                       | Estimated wind speed                            | m/s        | Weather station       |
+| `pitch_angle`                          | Pitch angle                                     | °          | Blade control system  |
+| `hub_ctrl_temp`                        | Temperature in the hub controller               | °C         | Hub                   |
+| `top_nacelle_ctrl_temp`                | Temperature in the top nacelle controller       | °C         | Nacelle               |
+| `vcs_choke_coil_temp`                  | Temperature in the choke coils on the VCS-section | °C         | VCS section           |
+| `vcp_board_temp`                       | Temperature on the VCP-board                    | °C         | VCS section           |
+| `vcs_cooling_water_temp`               | Temperature in the VCS cooling water            | °C         | VCS cooling system    |
+| `gearbox_hss_bearing_temp`             | Temperature in gearbox bearing on high-speed shaft | °C         | Gearbox               |
+| `gearbox_oil_temp`                     | Temperature of oil in gearbox                   | °C         | Gearbox               |
+| `gen_bearing2_temp`                    | Temperature in generator bearing 2 (Drive End)  | °C         | Generator             |
+| `gen_bearing1_temp`                    | Temperature in generator bearing 1 (Non-Drive End) | °C      | Generator             |
+| `gen_stator_winding_temp_p1`           | Temperature inside generator stator windings phase 1 | °C     | Generator             |
+| `gen_stator_winding_temp_p2`           | Temperature inside generator stator windings phase 2 | °C     | Generator             |
+| `gen_stator_winding_temp_p3`           | Temperature inside generator stator windings phase 3 | °C     | Generator             |
+| `gen_rpm`                              | Generator RPM in latest period                  | rpm        | Generator             |
+| `split_ring_chamber_temp`              | Temperature in the split ring chamber           | °C         | Slip ring chamber     |
+| `busbar_section_temp`                  | Temperature in the busbar section               | °C         | Electrical system     |
+| `igbt_grid_inverter_temp`              | Temperature measured by the IGBT driver on the grid-side inverter | °C | Inverter system      |
+| `actual_phase_displacement`            | Actual phase displacement                       | °          | Electrical system     |
+| `avg_current_p1`                       | Averaged current in phase 1                     | A          | Electrical system     |
+| `avg_current_p2`                       | Averaged current in phase 2                     | A          | Electrical system     |
+| `avg_current_p3`                       | Averaged current in phase 3                     | A          | Electrical system     |
+| `grid_freq`                            | Grid frequency                                  | Hz         | Electrical grid       |
+| `grid_cap_reactive_power`              | Possible grid capacitive reactive power         | kVAR       | Electrical grid       |
+| `grid_ind_reactive_power`              | Possible grid inductive reactive power         | kVAR       | Electrical grid       |
+| `grid_active_power`                    | Possible grid active power                      | kW         | Electrical grid       |
+| `grid_power`                           | Grid power                                     | kW         | Electrical grid       |
+| `grid_reactive_power`                   | Grid reactive power                            | kVAR       | Electrical grid       |
+| `avg_voltage_p1`                       | Averaged voltage in phase 1                     | V          | Electrical system     |
+| `avg_voltage_p2`                       | Averaged voltage in phase 2                     | V          | Electrical system     |
+| `avg_voltage_p3`                       | Averaged voltage in phase 3                     | V          | Electrical system     |
+| `igbt_rotor_inv_temp_p1`               | Temperature measured by the IGBT driver on the rotor-side inverter phase 1 | °C | Inverter system      |
+| `igbt_rotor_inv_temp_p2`               | Temperature measured by the IGBT driver on the rotor-side inverter phase 2 | °C | Inverter system      |
+| `igbt_rotor_inv_temp_p3`               | Temperature measured by the IGBT driver on the rotor-side inverter phase 3 | °C | Inverter system      |
+| `hv_transformer_temp_L1`               | Temperature in HV transformer phase L1          | °C         | High-voltage transformer |
+| `hv_transformer_temp_L2`               | Temperature in HV transformer phase L2          | °C         | High-voltage transformer |
+| `hv_transformer_temp_L3`               | Temperature in HV transformer phase L3          | °C         | High-voltage transformer |
+| `hydraulic_oil_temp`                   | Temperature of oil in the hydraulic group       | °C         | Hydraulic system      |
+| `nacelle_dir`                          | Nacelle direction                              | °          | Nacelle               |
+| `nacelle_temp`                         | Nacelle temperature                            | °C         | Nacelle               |
+| `rotor_rpm`                            | Rotor RPM                                      | rpm        | Rotor                 |
+| `nose_cone_temp`                       | Temperature in the nose cone                   | °C         | Nose cone             |
+
 
 
 
