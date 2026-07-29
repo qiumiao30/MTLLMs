@@ -40,8 +40,6 @@ These four rows are contiguous runs in the released `label.csv` and are document
 
 ## Signal-derived event log
 
-The public [`failure_log.csv`](failure_log.csv) records the four labelled periods as anonymized, signal-derived events. Relative to label-0 samples:
-
 | Event    | Main reproducible evidence                                                          | Evidence-based interpretation               |
 | -------- | ----------------------------------------------------------------------------------- | ------------------------------------------- |
 | WTMB-A01 | Temperature variance +131.3%; current variance +250.5%; generator-side power -41.0% | Prolonged fault-associated operating regime |
